@@ -16,10 +16,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "home", root_path %></li>
-        <li><%= link_to "about", about_path %></li>
         <% if user_signed_in? %>
-        <li><%= link_to 'New Product', new_product_path %></li>
+        <li><%= link_to new_product_path do %>
+        <span class="glyphicon glyphicon-plus"></span> Add Product
+        <% end %>
+        </li>
         <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
         <% else %>
         <li><%= link_to "Sign in", new_user_session_path %></li>
