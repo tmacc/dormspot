@@ -2,12 +2,15 @@
 
 <div id="products" class="transitions-enabled">
   <% @products.each do |product| %>
-    <div class="box panel panel-default">
+    <div class="hover-group box panel panel-default">
+      <div class="center">
+      <h3><strong><%= product.title %></strong></h3>
+      </div>
+      <div class="image-wrapper">
       <%= link_to image_tag(product.image.url(:medium)), product %>
-      <div class="panel-body">
+      </div>
+      <div class="hover-toggle panel-body">
         <p><%= product.description %></p>
-        <p><strong><%= product.user.name if product.user %></strong></p>
-        
         <% if current_user && product.user == current_user %>
           <div class="actions">
             <%= link_to edit_product_path(product) do %>
