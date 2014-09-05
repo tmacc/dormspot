@@ -25,6 +25,7 @@ end
 group :production do
 	gem 'pg'
 	gem 'rails_12factor'
+	gem 'rack-host-redirect', '~> 1.2.1'
 end
 
 group :doc do
