@@ -25,4 +25,3 @@ module Dormspot
   end
 end
 
-config.middleware.use Rack::HostRedirect, 'dormspotapp.herokuapp.com' => 'www.dormspot.com'
