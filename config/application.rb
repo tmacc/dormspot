@@ -22,6 +22,8 @@ module Dormspot
 
     #required for Heroku
     config.assets.initialize_on_precompile = false
+    config.middleware.use Rack::HostRedirect, 'dormspotapp.herokuapp.com' => 'www.dormspot.com'
   end
 end
+
 
