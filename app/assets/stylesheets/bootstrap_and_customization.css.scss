@@ -3,9 +3,9 @@
 $body-bg: 										#ecf0f1;
 $font-family-sans-serif: 			'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-height:								45px;
-$navbar-default-bg: 					white;
-$navbar-default-brand-color: 	#c0392b;
-$brand-primary: 							#c0392b;
+$navbar-default-bg: 					#2f4d78;
+$navbar-default-brand-color: 	white;
+$brand-primary: 							red;
 $jumbotron-bg: 								white;
 
 @import 'bootstrap';
@@ -14,9 +14,17 @@ $jumbotron-bg: 								white;
 	text-align: center;
 }
 
+.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
 .navbar-brand {
 	font-weight: bold;
-	font-size: 2em;
+	font-size: 2.3em;
+	float: none;
 }
 
 h3 {
@@ -25,4 +33,13 @@ h3 {
 
 p {
 	font-size: 14px;
+}
+
+.btn-xlarge {
+    padding: 10px 80px;
+    font-size: 22px; //change this to your desired size
+    line-height: normal;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
 }

@@ -6,7 +6,7 @@
 		<div class="panel-heading center">
 			<%= link_to image_tag(@product.image.url(:medium)), @product.hyperlink %>
 		</div>
-		<div class="panel body">
+		<div class="panel-body">
 		<p><%= @product.description %></p>
 
 		<% if @product.user == current_user %>
@@ -15,6 +15,10 @@
           Edit
           <% end %>
 		<% end %>
+			<div class="center">
+			<%= link_to 'Check it out!', @product.hyperlink, :class => "btn btn-success btn-xlarge" %>
+				<i class="icon-white icon-shopping-cart"></i>
+			</div>
 		</div>
 	</div>
 
